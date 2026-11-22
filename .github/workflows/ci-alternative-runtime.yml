@@ -28,6 +28,7 @@ jobs:
       matrix:
         node-version: [20]
         os: [macos-latest, ubuntu-latest, windows-latest]
+        runtime: [nsolid]
         include:
           - runtime: nsolid
             node-version: 20
@@ -89,6 +90,7 @@ jobs:
           persist-credentials: false
       - uses: nodesource/setup-nsolid@v1
         with:
+          node-version: 20
           nsolid-version: 5
       - name: install fastify
         run: |
